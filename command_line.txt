@@ -1,0 +1,26 @@
+>Создайте на базе папки 1.2. Site For Import Git-репозиторий.
+git init
+
+>Проигнорируйте файлы, находящиеся в подкаталоге tmp и файлы, заканчивающиеся суффиксами _old, _backup.
+echo "tmp/*
+*_old
+*_backup" > .gitignore
+
+>Добейтесь чтобы также были проигнорированы файлы Thumbs.db и .DS_Store
+>Сделайте коммит.
+git add *
+git commit -a -m "create .gitignore"
+
+>Создайте отдельный репозиторий на GitHub'е.
+https://github.com/1000karat/SiteForImport.git
+
+>Свяжите ваш локальный репозиторий с только что созданным удалённым репозиторием. Используйте в качестве кодового имени удалённого репозитория слово origin.
+git remote add origin https://github.com/1000karat/SiteForImport.git
+git remote -v
+
+>Отправьте сделанные вами изменения на GitHub.
+git push -u origin main
+
+>
+git add .gitignore
+git commit -a -m "Add .gitigrore in project"
